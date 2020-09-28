@@ -1,0 +1,32 @@
+{
+    "devDependencies": {
+        "@babel/preset-react": "^7.10.4",
+        "@symfony/webpack-encore": "^0.31.0",
+        "core-js": "^3.0.0",
+        "node-sass": "^4.14.1",
+        "regenerator-runtime": "^0.13.2",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "axios": "^0.20.0",
+        "gsap": "^3.5.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-dropdown": "^1.8.0",
+        "react-loader-spinner": "^3.1.14",
+        "react-redux": "^7.2.1",
+        "react-router-dom": "^5.2.0",
+        "react-toastify": "^6.0.8",
+        "redux": "^4.0.5",
+        "redux-persist": "^6.0.0",
+        "sass-loader": "^10.0.2"
+    }
+}

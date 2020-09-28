@@ -1,0 +1,31 @@
+.shop-container {
+  display: flex;
+  min-height: 100vh;
+
+  width: 100%;
+
+  .left {
+    height: 100vh;
+    width: 15%;
+  }
+
+  .right {
+    height: 100%;
+    width: 85%;
+
+    .img-container {
+      height: 400px;
+      width: 100%;
+      margin-bottom: 50px;
+
+      img {
+        @include img-cover;
+      }
+    }
+
+    .articles-collections {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

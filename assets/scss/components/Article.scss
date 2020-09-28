@@ -1,0 +1,65 @@
+.article {
+  width: 32%;
+  margin-bottom: 50px;
+  @include OpenSans;
+  margin-right: 2%;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+
+  .img-container {
+    height: 400px;
+    width: 100%;
+
+    img {
+      @include img-cover;
+    }
+  }
+
+  .article-name {
+    padding: 30px 0px 15px 10px;
+    @include border-bottom;
+
+    font-weight: bold;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+
+    .article-colors {
+      display: flex;
+      .color {
+        margin: 0px 10px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: black;
+        cursor: pointer;
+      }
+
+      .color-pink {
+        background-color: #ffdad2;
+      }
+      .color-blue {
+        background-color: #272d79;
+      }
+      .color-green {
+        background-color: $green;
+      }
+      .color-grey {
+        background-color: grey;
+      }
+      .color-black {
+        background-color: black;
+      }
+      .color-white {
+        background-color: white;
+        border: solid 1px rgba($color: grey, $alpha: 0.8);
+      }
+    }
+  }
+}

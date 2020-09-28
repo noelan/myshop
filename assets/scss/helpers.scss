@@ -1,0 +1,43 @@
+@mixin border-bottom {
+  border-bottom: 0.5px solid #dcdcde;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0 5px 6px -6px #777;
+  -moz-box-shadow: 0 5px 6px -6px #777;
+  box-shadow: 0 5px 6px -6px #777;
+}
+
+@mixin img-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: white;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

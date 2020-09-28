@@ -1,0 +1,38 @@
+.filter-container {
+  height: 100%;
+  width: 100%;
+
+  .title {
+    padding: 20px;
+    font-size: $title-size;
+    font-weight: 300;
+    @include border-bottom;
+    width: 80%;
+  }
+
+  .accordion {
+    @include border-bottom;
+    cursor: pointer;
+    width: 80%;
+    padding: 20px;
+    transition: 0.4s;
+    font-weight: bold;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+    span {
+      display: block;
+      padding: 10px;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

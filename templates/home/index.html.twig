@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	{% block stylesheets %}
+		{{ encore_entry_link_tags('app') }}
+		<script src="https://kit.fontawesome.com/9e0a8f2f81.js" crossorigin="anonymous"></script>
+
+	{% endblock %}
+
+	<div id="app"></div>
+
+	{% block javascripts %}
+		{{ encore_entry_script_tags('app') }}
+	{% endblock %}
+{% endblock %}
