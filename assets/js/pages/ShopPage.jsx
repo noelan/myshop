@@ -35,6 +35,7 @@ const ShopPage = (props) => {
 
   useEffect(() => {
     !type ? fetchArticlesByCategory() : fetchArticlesByType();
+    window.scrollTo(0, 0);
   }, [category, type]);
 
   return (

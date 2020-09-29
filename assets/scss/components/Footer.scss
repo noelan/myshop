@@ -1,0 +1,31 @@
+.footer {
+  background-color: $black-light;
+  height: 150px;
+
+  font-size: $sub-size + 2;
+
+  .flex {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .col {
+      display: flex;
+      margin: 0px 100px;
+
+      div,
+      i {
+        margin-right: 15px;
+      }
+
+      .fab {
+        font-size: 30px;
+        cursor: pointer;
+
+        padding: 8px;
+      }
+    }
+  }
+}

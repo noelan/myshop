@@ -1,5 +1,8 @@
 .navbar {
   height: 12vh;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
 
   /** Top Nav **/
   .top-nav {

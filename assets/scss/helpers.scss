@@ -33,6 +33,10 @@
   margin: 0 auto;
 }
 
+.contaier-full {
+  width: 100%;
+}
+
 .card {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   background-color: white;
@@ -40,4 +44,27 @@
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+  background: rgb(17, 17, 17);
+  padding: 18px 24px;
+  border-radius: 30px;
+}
+
+.center-text {
+  text-align: center;
 }

@@ -42,7 +42,7 @@ const Cart = () => {
   return (
     <>
       {isLoading && <LoaderCustom />}
-      <div className="container-fluid">
+      <div className="container-fluid ">
         {cart.length > 0 && (
           <div className="cart">
             <div className="flex card">
@@ -71,7 +71,7 @@ const Cart = () => {
                           {/* Right */}
                           <div className="detail-right">
                             <div
-                              className="clear btn"
+                              className="clear"
                               onClick={() => handleClick(article)}
                             >
                               <i className="fas fa-trash"></i>

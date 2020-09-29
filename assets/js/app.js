@@ -14,15 +14,16 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <main>
-            <HashRouter>
-              <Navbar />
+          <HashRouter>
+            <Navbar />
+            <main>
               <Switch>
                 <Route path="/shop/:category/:type" component={ShopPage} />
                 <Route path="/shop/:category" component={ShopPage} />
@@ -30,9 +31,10 @@ const App = () => {
                 <Route path="/cart" component={Cart} />
                 <Route path="/" component={HomePage} />
               </Switch>
-            </HashRouter>
-            <ToastContainer position="bottom-right" />
-          </main>
+            </main>
+          </HashRouter>
+          <ToastContainer position="bottom-right" />
+          <Footer />
         </PersistGate>
       </Provider>
     </>

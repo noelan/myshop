@@ -16,11 +16,12 @@ const Navbar = () => {
     },
     {
       name: "Baby",
-      subCategory: ["coussins", "draps", "duvets"],
+      // subCategory: ["coussins", "draps", "duvets"],
+      subCategory: [""],
     },
     {
       name: "Bath",
-      subCategory: ["coussins", "draps", "duvets"],
+      subCategory: [""],
     },
     {
       name: "Men",
@@ -41,7 +42,9 @@ const Navbar = () => {
             <li>Reviews</li>
           </ul>
           <ul className="center">
-            <li>Ettitude</li>
+            <Link to="/">
+              <li>Ettitude</li>
+            </Link>
           </ul>
           <ul className="top-right">
             <li>Search</li>
