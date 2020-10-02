@@ -131,7 +131,7 @@
 }
 
 .nav-menu {
-  display: block;
+  display: none !important;
   list-style-type: none;
   justify-content: flex-end;
 
@@ -144,6 +144,7 @@
   }
 
   @include s-d {
+    display: flex !important;
     position: absolute;
     right: 0;
     height: 100vh;
