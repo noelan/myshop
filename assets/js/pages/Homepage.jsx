@@ -8,21 +8,21 @@ const HomePage = () => {
     {
       category: "Bedding",
       title: "Tuck into vegan silk",
-      goTo: "Shop bed -->",
+      goTo: "Shop bed ",
       picture: "/images/usefull/collection-bed.jpg",
       path: "/shop/bed",
     },
     {
       category: "Bath",
       title: "Wrap yourself in plush waffle weave",
-      goTo: "Shop towels -->",
+      goTo: "Shop towels ",
       picture: "/images/usefull/collection-bath.jpg",
       path: "/shop/bath",
     },
     {
       category: "Women",
       title: "Slip into luxuriously soft loungewear",
-      goTo: "Shop women -->",
+      goTo: "Shop women ",
       picture: "/images/usefull/collection-sleep.jpg",
       path: "/shop/women",
     },
@@ -63,7 +63,7 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <div style={{ height: "88vh" }} />
+          <div className="parallax-height" />
         </Parallax>
         {/* Section 1 */}
         <div className="try-risk-free">
@@ -164,8 +164,8 @@ const HomePage = () => {
         {/* End Section 2 */}
         {/* Best Sellers */}
         <div className="container-full">
+          <div className="title">Best Sellers</div>
           <div className="best-sellers">
-            <div className="title">Best Sellers</div>
             <div className="flex">
               <div className="wrapper">
                 <Link to="/shop/women/tops">

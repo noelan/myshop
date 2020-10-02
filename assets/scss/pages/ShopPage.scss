@@ -2,7 +2,8 @@
   display: flex;
   min-height: 100vh;
   width: 100%;
-  margin-bottom: 100px;
+  margin: 50px 0px;
+  justify-content: center;
 
   .left {
     height: 100vh;
@@ -13,10 +14,12 @@
     height: 100%;
     width: 85%;
 
+    @include m-d {
+      width: 100%;
+    }
     .img-container {
       height: 400px;
       width: 100%;
-      margin-bottom: 50px;
 
       img {
         @include img-cover;
@@ -24,8 +27,14 @@
     }
 
     .articles-collections {
+      margin: 20px 10px 0px 10px;
       display: flex;
       flex-wrap: wrap;
+
+      @include m-u {
+        margin: 0;
+        margin-top: 20px;
+      }
     }
   }
 }

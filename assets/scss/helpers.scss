@@ -26,11 +26,19 @@
 .container {
   width: 95%;
   margin: 0 auto;
+
+  @include m-d {
+    width: 100%;
+  }
 }
 
 .container-fluid {
   width: 80%;
   margin: 0 auto;
+
+  @include m-d {
+    width: 95%;
+  }
 }
 
 .contaier-full {

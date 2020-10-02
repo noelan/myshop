@@ -5,7 +5,9 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="flex">
-          <div className="col">#MyEcoAttitude</div>
+          <div className="col">
+            <span> #MyEcoAttitude</span>
+          </div>
           <div className="col">
             <span>
               <i className="fab fa-facebook-f"></i>

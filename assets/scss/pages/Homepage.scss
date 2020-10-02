@@ -1,9 +1,20 @@
 .homepage {
   /* Parallax */
   .parallax {
+    .parallax-height {
+      height: 88vh;
+
+      @include m-d {
+        height: 60vh;
+      }
+
+      @include s-d {
+        height: 40vh;
+      }
+    }
     .text {
       @include center;
-      top: 35%;
+      top: 25%;
       font-weight: bold;
       color: white;
       font-size: 18pt;
@@ -27,13 +38,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-wrap: wrap;
+    text-align: center;
     .text {
-      width: 60%;
+      width: 50%;
       font-size: 18pt;
       line-height: 1.6;
       margin-right: 50px;
       color: $black-light;
+
+      @include m-d {
+        width: 100%;
+      }
 
       .title {
         @include OpenSans;
@@ -54,35 +70,74 @@
     width: 60%;
     margin: 50px auto;
 
+    @include l-d {
+      width: 80%;
+    }
+
+    @include m-d {
+      width: 100%;
+    }
+
     .row {
       height: 450px;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include s-d {
+        justify-content: center;
+        height: auto;
+      }
 
       .row-left {
         height: 100%;
-        width: 50%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0px 80px;
+
+        @include s-d {
+          order: 2;
+        }
+
+        @include s-d {
+          width: 95%;
+        }
 
         div {
           margin: 15px 0px;
           color: $black-light;
           font-size: 14pt;
           @include OpenSans;
+
+          @include s-d {
+            font-size: 10pt;
+            margin: 0px;
+            margin-bottom: 20px;
+          }
+          &:first-child {
+            margin-top: 20px;
+          }
         }
 
         .title {
           font-size: 22pt;
 
           font-weight: bold;
+          text-align: center;
+
+          @include s-d {
+            font-size: 16pt;
+          }
         }
       }
       .row-right {
         height: 100%;
-        width: 50%;
+        width: 45%;
+        @include s-d {
+          width: 95%;
+        }
 
         .img-container {
           width: 100%;
@@ -96,7 +151,7 @@
   }
   /* Section 2 */
   .section-two {
-    height: 400px;
+    min-height: 400px;
     background: #e6ebe6;
     display: flex;
     justify-content: center;
@@ -109,10 +164,28 @@
       align-items: center;
       justify-content: space-between;
 
+      @include s-d {
+        flex-wrap: wrap;
+      }
+
+      @include m-d {
+        justify-content: center;
+      }
+
       /* Left */
       .col-left {
         display: flex;
         width: 45%;
+
+        @include m-d {
+          flex-wrap: wrap;
+        }
+
+        @include s-d {
+          width: 100%;
+          order: 2;
+          flex-wrap: nowrap;
+        }
 
         .wrapper {
           width: 40%;
@@ -132,6 +205,10 @@
 
           .text {
             margin-top: 20px;
+
+            @include m-d {
+              margin-bottom: 20px;
+            }
           }
         }
       }
@@ -142,6 +219,10 @@
         width: 50%;
         text-align: center;
 
+        @include s-d {
+          font-size: 12pt;
+        }
+
         .top-text {
           font-size: 14pt;
           color: black;
@@ -151,10 +232,18 @@
           color: $black-light;
           font-weight: bold;
           font-size: 18pt;
+
+          @include s-d {
+            font-size: 14pt;
+          }
         }
 
         div {
           margin: 20px 0px;
+
+          @include s-d {
+            margin: 10px 0px;
+          }
         }
 
         .btn {
@@ -165,26 +254,69 @@
   }
   /* Best Sellers */
   .container-full {
-    padding: 80px 0px;
+    padding: 100px 0px;
+
+    @include m-d {
+      padding: 50px 0px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 24pt;
+      margin-bottom: 100px;
+      @include OpenSans;
+      color: $black-light;
+
+      @include m-d {
+        margin-bottom: 50px;
+      }
+    }
 
     .best-sellers {
+      display: flex;
+
       width: 60%;
       margin: auto;
 
-      .title {
-        text-align: center;
-        font-size: 24pt;
-        margin-bottom: 100px;
-        @include OpenSans;
-        color: $black-light;
+      @include xl-d {
+        width: 80%;
+      }
+
+      @include l-d {
+        width: 90%;
+      }
+
+      @include m-d {
+        width: 100%;
       }
 
       .flex {
         display: flex;
+        justify-content: center;
+        overflow-x: auto;
 
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        @include m-d {
+          justify-content: start;
+        }
         .wrapper {
           width: 22%;
           margin-right: 1%;
+
+          &:first-child {
+            margin-left: 1%;
+          }
+
+          &:last-child {
+            padding-right: 1%;
+          }
+
+          @include m-d {
+            min-width: 280px;
+            justify-content: initial;
+          }
 
           .img-container {
             width: 100%;

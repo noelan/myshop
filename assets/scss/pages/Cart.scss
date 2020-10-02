@@ -1,5 +1,9 @@
 .cart {
   margin: 30px 0px;
+
+  @include xs-d {
+    margin: 0;
+  }
   .header-table {
     display: flex;
     justify-content: space-around;
@@ -14,23 +18,50 @@
 
   .flex {
     display: flex;
+    @include s-d {
+      flex-wrap: wrap;
+    }
 
     /* Left */
     .left {
+      @include s-d {
+        width: 100%;
+        order: 2;
+      }
       width: 60%;
       .row-article {
         height: 150px;
         width: 100%;
         margin: 50px 0px;
 
+        @include s-d {
+          height: 200px;
+        }
+
+        @include xs-d {
+          height: auto;
+        }
+
         .flex-card {
           display: flex;
           height: 100%;
           margin: 0px 50px;
 
+          @include xs-d {
+            flex-wrap: wrap;
+          }
+
           .img-container {
             height: 100%;
             width: 20%;
+
+            @include s-d {
+              width: 50%;
+            }
+
+            @include xs-d {
+              width: 100%;
+            }
 
             img {
               @include img-cover;
@@ -43,9 +74,18 @@
             color: $black-light;
             width: 100%;
 
+            @include xs-d {
+              padding: 0;
+              margin-top: 10px;
+            }
+
             /* Left */
             .detail-left {
               width: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-start;
 
               .title {
                 font-weight: bold;
@@ -56,6 +96,10 @@
               div {
                 margin-bottom: 10px;
                 @include OpenSans;
+
+                &:last-child {
+                  margin-bottom: 0px;
+                }
               }
             }
             /* Right */
@@ -66,7 +110,7 @@
               align-items: flex-end;
               width: 20%;
 
-              .fa-trash {
+              .fa-minus-square {
                 padding-top: 5px;
                 color: $red;
                 cursor: pointer;
@@ -77,7 +121,6 @@
                 @include OpenSans;
                 font-size: 14pt;
                 color: $red;
-                margin-bottom: 10px;
               }
             }
           }
@@ -88,28 +131,54 @@
 
     /* Right */
     .right {
-      position: relative;
       width: 40%;
-      min-height: 80vh;
-
+      position: relative;
       background-color: rgba($color: $red, $alpha: 0.3);
+      @include m-u {
+        min-height: 80vh;
+      }
+      @include s-d {
+        min-height: 30vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
 
       .text {
-        margin: 0;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
         white-space: nowrap;
         color: $black-light;
+        width: 95%;
+        text-align: center;
+
+        @include m-d {
+          width: 90%;
+          white-space: initial;
+          margin: auto;
+        }
+
+        @include s-u {
+          margin: 0;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
 
         div {
           margin-bottom: 20px;
+
+          @include m-d {
+            margin-bottom: 10px;
+          }
         }
 
         .sub-text {
           margin-bottom: 50px;
+
+          @include m-d {
+            margin-bottom: 0px;
+          }
         }
 
         .total {
@@ -127,6 +196,10 @@
           display: flex;
           margin-bottom: 50px;
           justify-content: center;
+
+          @include m-d {
+            margin-bottom: 20px;
+          }
 
           .checkbox-cart {
             vertical-align: middle;
@@ -148,7 +221,7 @@
           color: rgb(255, 255, 255);
           line-height: 1.5;
           margin-bottom: 12px;
-          width: 100%;
+          width: 200px;
           font-weight: 500;
           font-size: 16px;
           text-decoration: none;
@@ -167,4 +240,8 @@
   font-size: 16pt;
   margin-top: 150px;
   @include OpenSans;
+}
+
+.container-cart {
+  width: 100% !important;
 }

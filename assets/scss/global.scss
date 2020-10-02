@@ -12,6 +12,10 @@ main {
   overflow-x: hidden;
   padding-top: 12vh;
   min-height: 83.29vh;
+
+  @include s-d {
+    padding-top: 6vh;
+  }
 }
 
 a {

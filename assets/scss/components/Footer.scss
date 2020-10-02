@@ -1,8 +1,13 @@
 .footer {
   background-color: $black-light;
-  height: 150px;
 
+  min-height: 050px;
   font-size: $sub-size + 2;
+  padding: 10px;
+
+  @include m-u {
+    height: 100px;
+  }
 
   .flex {
     height: 100%;
@@ -11,13 +16,40 @@
     align-items: center;
     color: white;
 
+    @include m-d {
+      flex-wrap: wrap;
+    }
+
     .col {
       display: flex;
-      margin: 0px 100px;
+      overflow: hidden;
 
-      div,
-      i {
-        margin-right: 15px;
+      @include m-u {
+        margin-right: 50px;
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+
+      @include m-d {
+        flex-wrap: wrap;
+        justify-content: center;
+        white-space: nowrap;
+        margin: 5px 0px;
+        width: 100%;
+      }
+
+      div {
+        margin-bottom: 10px;
+
+        @include m-u {
+          margin-right: 10px;
+        }
+
+        @include m-d {
+          width: 100%;
+          text-align: center;
+        }
       }
 
       .fab {

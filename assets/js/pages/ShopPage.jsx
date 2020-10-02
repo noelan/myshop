@@ -43,9 +43,9 @@ const ShopPage = (props) => {
       <div className="container">
         <div className="shop-container">
           {/* Left */}
-          <div className="left col">
+          {/* <div className="left col">
             <Filter category={category} />
-          </div>
+          </div> */}
           {/* End Left */}
           {/* Right */}
           <div className="right col">
