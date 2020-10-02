@@ -31,8 +31,12 @@ const Cart = () => {
   console.log(cart);
 
   const handleCheckout = () => {
-    dispatch(checkout());
-    toast.success("Bravo tu as payée Merci !");
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      dispatch(checkout());
+      toast.success("Bravo tu as payée Merci !");
+    }, 500);
   };
 
   useEffect(() => {
