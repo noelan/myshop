@@ -18,6 +18,7 @@
 
   .flex {
     display: flex;
+    min-height: 60vh;
     @include s-d {
       flex-wrap: wrap;
     }
@@ -152,7 +153,7 @@
 
         @include m-d {
           width: 90%;
-          white-space: initial;
+          white-space: normal;
           margin: auto;
         }
 
@@ -177,7 +178,7 @@
           margin-bottom: 50px;
 
           @include m-d {
-            margin-bottom: 0px;
+            margin-bottom: 10px;
           }
         }
 
@@ -243,5 +244,13 @@
 }
 
 .container-cart {
-  width: 100% !important;
+  width: 60% !important;
+
+  @include l-d {
+    width: 80% !important;
+  }
+
+  @include m-d {
+    width: 90% !important;
+  }
 }
