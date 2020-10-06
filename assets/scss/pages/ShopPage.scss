@@ -21,6 +21,18 @@
       height: 400px;
       width: 100%;
 
+      @include m-d {
+        height: 300px;
+      }
+
+      @include s-d {
+        height: 200px;
+      }
+
+      @include xs-d {
+        height: 150px;
+      }
+
       img {
         @include img-cover;
       }
